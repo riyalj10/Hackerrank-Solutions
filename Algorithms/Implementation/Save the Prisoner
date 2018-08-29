@@ -1,0 +1,82 @@
+//n=no. of prisoners
+//m=no. of sweets
+//s= starting position
+static int saveThePrisoner(int n, int m, int s)
+    {
+        int rev;
+        int a=m%n;
+        rev=n-a+1;
+        if(rev<a)
+        {
+            for(int i=0;i<rev;i++)
+            {
+                if(s==1)
+                {
+                    s=n;
+                }
+                else
+                {
+                    s--;
+                }
+            }
+            return s;
+        }
+        else
+        {
+            for(int i=0;i<a;i++)
+            {
+                if(s==n && i!=a-1)
+                {
+                    s=1;
+                }
+                else
+                {
+                    s++;
+                }
+            }
+            if((s-1)==0) {
+                return n;
+            }
+            else
+                return s-1;
+        }
+    }static int saveThePrisoner(int n, int m, int s)
+    {
+        int rev;
+        int a=m%n;
+        rev=n-a+1;
+        if(rev<a)
+        {
+            for(int i=0;i<rev;i++)
+            {
+                if(s==1)
+                {
+                    s=n;
+                }
+                else
+                {
+                    s--;
+                }
+            }
+            return s;
+        }
+        else
+        {
+            for(int i=0;i<a;i++)
+            {
+                if(s==n && i!=a-1)
+                {
+                    s=1;
+                }
+                else
+                {
+                    s++;
+                }
+            }
+            if((s-1)==0) {
+                return n;
+            }
+            else
+                return s-1;
+        }
+    }
